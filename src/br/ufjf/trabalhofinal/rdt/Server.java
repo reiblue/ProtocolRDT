@@ -54,6 +54,7 @@ public class Server {
 		
 		try 
 		{
+			
 			int porta = 9876;
 			int numConn = 1;
 			
@@ -581,39 +582,7 @@ public class Server {
 	         th_application.start();
 	         
 			//---------------------------------------------------------------------------
-			/*
-	        DatagramPacket receivePacket = new DatagramPacket(receiveData,
-					receiveData.length);
-			System.out.println("Esperando por datagrama UDP na porta " + porta);
-			
-			serverSocket.receive(receivePacket);
-			System.out.print("Datagrama UDP [" + numConn + "] recebido...");
-
-			String packet = new String(receivePacket.getData());
-			System.out.println(packet);
-			
-			
-			
-			InetAddress IPAddress = receivePacket.getAddress();
-			int port = receivePacket.getPort();	
-			
-			//Guarda tupla {IP, Porta}
-			rdt = new ProtocolRDT(receivePacket.getAddress().toString(), port);				
-			String[] pkt = rdt.DisassembleProtocol(packet);
-			
-			//Estabelece conexão
-			if(Integer.parseInt(pkt[3]) == 1)
-			{
-				sendData = rdt.StartConnection().getBytes();
-
-				DatagramPacket sendPacket = new DatagramPacket(sendData,
-						sendData.length, IPAddress, port);
 				
-				serverSocket.send(sendPacket);
-			}
-			
-			serverSocket.receive(receivePacket);
-			
 
 			while (true) {
 
@@ -635,7 +604,7 @@ public class Server {
 				System.out.println("OK\n");	
 				
 			}
-			*/
+			
 			
 			
 		} catch (Exception e) 
